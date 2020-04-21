@@ -1,0 +1,7 @@
+<div>
+    <app-header (gameOver)="gameOverTimeout()"></app-header>
+    <app-board [boardSize]="boardSize"></app-board>
+</div>
+<div>
+    <app-options (boardSizeChanged)="updateBoardSize($event)"></app-options>
+</div>
