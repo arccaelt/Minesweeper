@@ -1,4 +1,22 @@
 table {
 	float: none;
-	margin: auto;
+	margin: 0 auto;
+	border-spacing: 3vw;
+	border-collapse: collapse;
+
+	width: 50%;
+	height: 90%;
+}
+
+.hidden {
+	background-color: gray;
+	border: 1px solid black;
+}
+
+.cellValue {
+	visibility: visible;
+}
+
+.hiddenCellValue {
+	visibility: hidden;
 }

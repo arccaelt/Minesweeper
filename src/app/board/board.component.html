@@ -1,8 +1,12 @@
 <table>
 	<tbody>
-		<tr *ngFor="let row of boardSizeCollection">
-			<td *ngFor="let col of row">
-				{{col}}
+		<tr *ngFor="let row of board; let rowIndex = index" (click)="rowClick(currentRow)" #currentRow>
+			<td *ngFor="let col of row; let colIndex = index" 
+			class="{{boardVisited[rowIndex][colIndex] ? 'shown' : 'hidden'}}"
+			(click)="cellClick(currentCell)" #currentCell>
+				<span class="{{boardVisited[rowIndex][colIndex] ? 'cellValue' : 'hiddenCellValue'}}">
+					{{col}}
+				</span>
 			</td>
 		</tr>
 	</tbody>
